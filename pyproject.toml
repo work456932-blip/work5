@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scenerepair"
+version = "0.1.0"
+description = "Anonymous reference implementation of causal root localization and selective spatial repair"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "PyYAML>=6", "Pillow>=9", "scipy>=1.10"]
+
+[project.scripts]
+scenerepair = "scenerepair.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["scenerepair*"]

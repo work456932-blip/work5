@@ -1,0 +1,44 @@
+# Cross-backbone preset; thresholds stay unchanged. Set a concrete local revision.
+trajectories: 3
+max_states: 8
+candidate_nodes: 4
+repairs: 3
+equivalent_variants: 3
+symbolic_weight: 0.35
+vlm_weight: 0.65
+tau_c: 0.58
+tau_n: 0.08
+tau_u: 0.04
+tau_r: 0.18
+competitive_margin: 0.03
+objective_weights:
+- 0.55
+- 0.25
+- 0.2
+acceptance_repeats: 3
+acceptance_confidence: 0.9
+acceptance_margin: 0.02
+necessity_weights:
+- 0.5
+- 0.5
+sufficiency_weights:
+- 0.3333333333333333
+- 0.3333333333333333
+- 0.3333333333333333
+root_weights:
+- 1.0
+- 1.0
+- 1.0
+- 1.0
+stability_min: 0.0
+stability_variance_penalty: 4.0
+critic_disagreement_tolerance: 0.25
+abstain_nonancestral_ties: true
+temperature: 0.7
+max_output_tokens: 4096
+image_max_side: 1024
+seed: 42
+backend_factory: scenerepair.backends:HTTPBackend
+backend_kwargs:
+  model_id: Qwen3-VL-32B
+  revision: SET_LOCAL_FROZEN_REVISION

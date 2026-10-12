@@ -1,0 +1,8 @@
+Validation performed without model inference or dataset access:
+- Five offline graph/equation/label-boundary invariant checks passed.
+- Python syntax and CLI import/help checks passed.
+- All configuration files parsed and validated.
+- Source scanned for personal names, affiliations, accounts and email patterns.
+- Archive excludes bytecode, caches, input manuscript and local artifacts.
+
+External model integration and benchmark evaluation were not executed.
